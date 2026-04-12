@@ -47,23 +47,23 @@ export default function Home() {
           {/* Metadata Bar */}
           <div className="hairline-h" style={{ marginBottom: '1rem' }} />
           
-          <div className="social-list-horizontal" style={{ padding: '0 0 1rem 0' }}>
-            <a href="https://github.com/IrfanNG" target="_blank" rel="noopener noreferrer" className="social-icon-link">
+          <nav aria-label="Social Profiles" className="social-list-horizontal" style={{ padding: '0 0 1rem 0' }}>
+            <a href="https://github.com/IrfanNG" target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label="GitHub">
               <Github size={20} strokeWidth={1.5} />
             </a>
-            <a href="https://www.linkedin.com/in/irfan-ariff-20691a264" target="_blank" rel="noopener noreferrer" className="social-icon-link">
+            <a href="https://www.linkedin.com/in/irfan-ariff-20691a264" target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label="LinkedIn">
               <Linkedin size={20} strokeWidth={1.5} />
             </a>
-            <a href="https://www.threads.net/@irfanrff" target="_blank" rel="noopener noreferrer" className="social-icon-link">
+            <a href="https://www.threads.net/@irfanrff" target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label="Threads">
               <AtSign size={20} strokeWidth={1.5} />
             </a>
-            <a href="mailto:mnifanmohdariff@gmail.com" className="social-icon-link">
+            <a href="mailto:mnifanmohdariff@gmail.com" className="social-icon-link" aria-label="Email">
               <Mail size={20} strokeWidth={1.5} />
             </a>
-            <a href="https://wa.me/60183823063" target="_blank" rel="noopener noreferrer" className="social-icon-link">
+            <a href="https://wa.me/60183823063" target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label="WhatsApp">
               <MessageCircle size={20} strokeWidth={1.5} />
             </a>
-          </div>
+          </nav>
 
           <div className="metadata-bar">
             {metadata.map((item, index) => (
