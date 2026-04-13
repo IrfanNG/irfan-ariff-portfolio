@@ -39,7 +39,7 @@ export default function Home() {
                 IRFAN ARIFF
               </h1>
               <p className="label-mono subtitle">
-                SOFTWARE ENGINEERING STUDENT // UNI AMBASSADOR AT KRACKEDDEVS // SEEKING INTERNSHIP
+                SOFTWARE ENGINEERING STUDENT // UNI AMBASSADOR AT KRACKEDDEVS
               </p>
             </div>
           </div>
@@ -87,15 +87,15 @@ export default function Home() {
         >
           {/* 01 // INTRODUCTION */}
           <div className="content-section">
-            <h2 className="label-mono section-header">// INTRODUCTION</h2>
+            <h2 className="label-mono section-header">{"// INTRODUCTION"}</h2>
             <p className="intro-text">
-              Software Engineering student at UniKL MIIT. I build software with a focus on clean logic and scalable architecture. From freelance web systems to mobile apps, I prioritize code quality and efficiency. Currently looking for an internship to contribute to a professional engineering team.
+              Software Engineering student at UniKL MIIT. I build software with a focus on clean logic and scalable architecture. From freelance web systems to mobile apps, I prioritize code quality and efficiency.
             </p>
           </div>
 
           {/* 02 // PROFESSIONAL EXPERIENCE */}
           <div className="content-section">
-            <h2 className="label-mono section-header">// EXPERIENCE</h2>
+            <h2 className="label-mono section-header">{"// EXPERIENCE"}</h2>
 
             <div className="dossier-table">
               <div className="table-row">
@@ -129,7 +129,7 @@ export default function Home() {
 
           {/* 03 // ACADEMIC FOUNDATION */}
           <div className="content-section">
-            <h2 className="label-mono section-header">// ACADEMIC FOUNDATION</h2>
+            <h2 className="label-mono section-header">{"// ACADEMIC FOUNDATION"}</h2>
 
             <div className="dossier-table">
               <div className="table-row">
@@ -162,7 +162,7 @@ export default function Home() {
           </div>
           {/* 04 // CERTIFICATIONS */}
           <div className="content-section">
-            <h2 className="label-mono section-header">// CERTIFICATIONS</h2>
+            <h2 className="label-mono section-header">{"// CERTIFICATIONS"}</h2>
 
             <div className="dossier-table">
               {/* OWASP */}
@@ -196,7 +196,7 @@ export default function Home() {
 
           {/* 05 // COLLABORATION & STUDIO */}
           <div className="content-section">
-            <h2 className="label-mono section-header">// COLLABORATION</h2>
+            <h2 className="label-mono section-header">{"// COLLABORATION"}</h2>
             <div className="studio-box">
               <p className="intro-text" style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
                 For software engineering inquiries, digital product development, or collaboration through Alchimistra Studio.
