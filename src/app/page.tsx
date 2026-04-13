@@ -62,7 +62,7 @@ export default function Home() {
             <a href="https://wa.me/60183823063" target="_blank" rel="noopener noreferrer" className="social-icon-link">
               <MessageCircle size={20} strokeWidth={1.5} />
             </a>
-          </div>
+          </nav>
 
           <div className="metadata-bar">
             {metadata.map((item, index) => (
