@@ -39,16 +39,15 @@ export default function Home() {
                 IRFAN ARIFF
               </h1>
               <p className="label-mono subtitle">
-                SOFTWARE ENGINEERING STUDENT // UNI AMBASSADOR AT KRACKEDDEVS // SEEKING INTERNSHIP
+                SOFTWARE ENGINEERING STUDENT // UNI AMBASSADOR AT KRACKEDDEVS
               </p>
             </div>
           </div>
 
           {/* Metadata Bar */}
           <div className="hairline-h" style={{ marginBottom: '1rem' }} />
-          
-          <div className="social-list-horizontal" style={{ padding: '0 0 1rem 0' }}>
-            <a href="https://github.com/IrfanNG" target="_blank" rel="noopener noreferrer" className="social-icon-link">
+          <nav aria-label="Social Profiles" className="social-list-horizontal" style={{ padding: '0 0 1rem 0' }}>
+            <a href="https://github.com/IrfanNG" target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label="GitHub">
               <Github size={20} strokeWidth={1.5} />
             </a>
             <a href="https://www.linkedin.com/in/irfan-ariff-20691a264" target="_blank" rel="noopener noreferrer" className="social-icon-link">
@@ -89,7 +88,7 @@ export default function Home() {
           <div className="content-section">
             <h2 className="label-mono section-header">// INTRODUCTION</h2>
             <p className="intro-text">
-              Software Engineering student at UniKL MIIT. I build software with a focus on clean logic and scalable architecture. From freelance web systems to mobile apps, I prioritize code quality and efficiency. Currently looking for an internship to contribute to a professional engineering team.
+              Software Engineering student at UniKL MIIT. I build software with a focus on clean logic and scalable architecture. From freelance web systems to mobile apps, I prioritize code quality and efficiency.
             </p>
           </div>
 
