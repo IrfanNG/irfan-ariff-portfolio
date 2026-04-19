@@ -18,19 +18,21 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="header-block"
         >
           {/* Identity Section */}
           <div className="identity-container">
             <div className="photo-box">
               <Image
-                src="/photo-id.png"
+                src="/photo-id.webp"
                 alt="Irfan Ariff"
                 width={150}
                 height={150}
                 className="photo-img"
                 priority
+                quality={90}
+                sizes="(max-width: 768px) 150px, 150px"
               />
             </div>
 
@@ -46,7 +48,7 @@ export default function Home() {
 
           {/* Metadata Bar */}
           <div className="hairline-h" style={{ marginBottom: '1rem' }} />
-          
+
           <nav aria-label="Social Profiles" className="social-list-horizontal" style={{ padding: '0 0 1rem 0' }}>
             <a href="https://github.com/IrfanNG" target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label="GitHub">
               <Github size={20} strokeWidth={1.5} />
@@ -83,7 +85,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
         >
           {/* 01 // INTRODUCTION */}
           <div className="content-section">
@@ -150,14 +152,6 @@ export default function Home() {
                 <span className="label-mono cell-org">ADV. TECH TRAINING CENTRE</span>
               </div>
               <div className="hairline-h table-divider" />
-
-              <div className="table-row">
-                <span className="label-mono cell-date">2019 — 2020</span>
-                <div className="cell-details">
-                  <span className="serif-display cell-role">TECHNOLOGY COMPUTER SYSTEM</span>
-                </div>
-                <span className="label-mono cell-org">GIATMARA</span>
-              </div>
             </div>
           </div>
           {/* 04 // CERTIFICATIONS */}
@@ -170,7 +164,7 @@ export default function Home() {
                 <span className="label-mono cell-date">JAN 2026</span>
                 <div className="cell-details">
                   <span className="serif-display cell-role">HOW HACKERS BREAK INTO WIFI</span>
-                  <a href="/cert-owasp-wifi.png" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  <a href="/cert-owasp-wifi.webp" target="_blank" rel="noopener noreferrer" className="repo-link">
                     <ExternalLink size={12} strokeWidth={1.5} />
                     <span className="label-mono" style={{ fontSize: '0.6rem' }}>VIEW</span>
                   </a>
@@ -184,7 +178,7 @@ export default function Home() {
                 <span className="label-mono cell-date">NOV 2025</span>
                 <div className="cell-details">
                   <span className="serif-display cell-role">GOOGLE PROJECT MANAGEMENT</span>
-                  <a href="/cert-google-pm.png" target="_blank" rel="noopener noreferrer" className="repo-link">
+                  <a href="/cert-google-pm.webp" target="_blank" rel="noopener noreferrer" className="repo-link">
                     <ExternalLink size={12} strokeWidth={1.5} />
                     <span className="label-mono" style={{ fontSize: '0.6rem' }}>VIEW</span>
                   </a>
