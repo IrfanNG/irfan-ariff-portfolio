@@ -159,6 +159,20 @@ export default function Home() {
             <h2 className="label-mono section-header">{"// CERTIFICATIONS"}</h2>
 
             <div className="dossier-table">
+              {/* GITHUB WORKSHOP */}
+              <div className="table-row">
+                <span className="label-mono cell-date">MAR 2026</span>
+                <div className="cell-details">
+                  <span className="serif-display cell-role">GITHUB WORKSHOP — OPEN SOURCE CONTRIBUTOR</span>
+                  <a href="/github-workshop.webp" target="_blank" rel="noopener noreferrer" className="repo-link">
+                    <ExternalLink size={12} strokeWidth={1.5} />
+                    <span className="label-mono" style={{ fontSize: '0.6rem' }}>VIEW</span>
+                  </a>
+                </div>
+                <span className="label-mono cell-org">GDG IIUM</span>
+              </div>
+              <div className="hairline-h table-divider" />
+
               {/* OWASP */}
               <div className="table-row">
                 <span className="label-mono cell-date">JAN 2026</span>
