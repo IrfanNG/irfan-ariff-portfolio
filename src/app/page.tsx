@@ -203,7 +203,7 @@ export default function Home() {
           </div>
 
           {/* 05 // COLLABORATION & STUDIO */}
-          <div className="content-section">
+          {/* <div className="content-section">
             <h2 className="label-mono section-header">{"// COLLABORATION"}</h2>
             <div className="studio-box">
               <p className="intro-text" style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
@@ -214,7 +214,7 @@ export default function Home() {
                 <span className="label-mono">OPEN ALCHIMISTRA STUDIO</span>
               </a>
             </div>
-          </div>
+          </div> */}
         </motion.div>
       </section>
     </main>
