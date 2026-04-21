@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, Terminal, Github, Linkedin, Globe, AtSign, ExternalLink, Mail, MessageCircle } from 'lucide-react';
+import { MapPin, Terminal, Github, Linkedin, AtSign, ExternalLink, Mail, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 
 
