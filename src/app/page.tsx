@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, Terminal, Github, Linkedin, AtSign, ExternalLink, Mail, MessageCircle } from 'lucide-react';
+import { MapPin, Terminal, Github, Linkedin, AtSign, ExternalLink, Mail, MessageCircle, Globe } from 'lucide-react';
 import Image from 'next/image';
 
 
@@ -95,13 +95,33 @@ export default function Home() {
             </p>
           </div>
 
-          {/* 02 // PROFESSIONAL EXPERIENCE */}
+          {/* 02 // VIEW MY WORK */}
+          <div className="content-section">
+            <h2 className="label-mono section-header">{"// VIEW MY WORK"}</h2>
+
+            <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-1">
+                <h3 className="serif-display" style={{ fontSize: '1.25rem', lineHeight: '1.1', textTransform: 'uppercase' }}>COPPER BOSTON GROUP</h3>
+                <p className="label-mono" style={{ color: 'var(--accent)', fontSize: '0.6rem' }}>DIGITAL INFRASTRUCTURE & BRAND ARCHITECTURE</p>
+              </div>
+
+              <p className="intro-text" style={{ fontSize: '1.1rem' }}>
+                Through Copper Boston, I architect high-performance digital ecosystems for institutions and independent brands. This operation focuses on technical stability and data-driven UI.
+              </p>
+
+              <a href="https://www.copperboston.dev" target="_blank" rel="noopener noreferrer" className="repo-link" style={{ padding: '0.8rem 1.5rem', marginTop: '0.5rem' }}>
+                <Globe size={16} strokeWidth={1.5} />
+                <span className="label-mono">ENTER COPPER BOSTON SITES</span>
+              </a>
+            </div>
+          </div>
+
+          {/* 03 // PROFESSIONAL EXPERIENCE */}
           <div className="content-section">
             <h2 className="label-mono section-header">{"// EXPERIENCE"}</h2>
 
             <div className="dossier-table">
               <div className="table-row">
-                <span className="label-mono cell-date">MAR 2026</span>
                 <div className="cell-details">
                   <span className="serif-display cell-role">SAKURAYA — DUIT RAYA PLANNER</span>
                   <p className="label-mono cell-desc">Modernizing tradition through a specialized financial gifting engine.</p>
@@ -115,7 +135,6 @@ export default function Home() {
               <div className="hairline-h table-divider" />
 
               <div className="table-row">
-                <span className="label-mono cell-date">MAR 2026</span>
                 <div className="cell-details">
                   <span className="serif-display cell-role">SAF — MOSQUE COMMUNITY PLATFORM</span>
                   <p className="label-mono cell-desc">Bridging congregations through modern collaborative digital solutions.</p>
@@ -129,13 +148,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 03 // ACADEMIC FOUNDATION */}
+          {/* 04 // ACADEMIC FOUNDATION */}
           <div className="content-section">
             <h2 className="label-mono section-header">{"// ACADEMIC FOUNDATION"}</h2>
 
             <div className="dossier-table">
               <div className="table-row">
-                <span className="label-mono cell-date">2023 — 2027</span>
                 <div className="cell-details">
                   <span className="serif-display cell-role">BSc. INFORMATION TECHNOLOGY (SOFT. ENG)</span>
                   <p className="label-mono cell-desc">Focused on Object-Oriented Programming, Web Architecture, and IT Project Management.</p>
@@ -145,7 +163,6 @@ export default function Home() {
               <div className="hairline-h table-divider" />
 
               <div className="table-row">
-                <span className="label-mono cell-date">2021 — 2022</span>
                 <div className="cell-details">
                   <span className="serif-display cell-role">DIPLOMA IN COMPUTER SYSTEM</span>
                 </div>
@@ -154,14 +171,13 @@ export default function Home() {
               <div className="hairline-h table-divider" />
             </div>
           </div>
-          {/* 04 // CERTIFICATIONS */}
+          {/* 05 // CERTIFICATIONS */}
           <div className="content-section">
             <h2 className="label-mono section-header">{"// CERTIFICATIONS"}</h2>
 
             <div className="dossier-table">
               {/* GITHUB WORKSHOP */}
               <div className="table-row">
-                <span className="label-mono cell-date">MAR 2026</span>
                 <div className="cell-details">
                   <span className="serif-display cell-role">GITHUB WORKSHOP — OPEN SOURCE CONTRIBUTOR</span>
                   <a href="/github-workshop.webp" target="_blank" rel="noopener noreferrer" className="repo-link">
@@ -175,7 +191,6 @@ export default function Home() {
 
               {/* OWASP */}
               <div className="table-row">
-                <span className="label-mono cell-date">JAN 2026</span>
                 <div className="cell-details">
                   <span className="serif-display cell-role">HOW HACKERS BREAK INTO WIFI</span>
                   <a href="/cert-owasp-wifi.webp" target="_blank" rel="noopener noreferrer" className="repo-link">
@@ -189,7 +204,6 @@ export default function Home() {
 
               {/* GOOGLE PM */}
               <div className="table-row">
-                <span className="label-mono cell-date">NOV 2025</span>
                 <div className="cell-details">
                   <span className="serif-display cell-role">GOOGLE PROJECT MANAGEMENT</span>
                   <a href="/cert-google-pm.webp" target="_blank" rel="noopener noreferrer" className="repo-link">
@@ -201,20 +215,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          {/* 05 // COLLABORATION & STUDIO */}
-          {/* <div className="content-section">
-            <h2 className="label-mono section-header">{"// COLLABORATION"}</h2>
-            <div className="studio-box">
-              <p className="intro-text" style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
-                For software engineering inquiries, digital product development, or collaboration through Alchimistra Studio.
-              </p>
-              <a href="https://alchimistra.com" target="_blank" rel="noopener noreferrer" className="repo-link" style={{ padding: '0.8rem 1.5rem' }}>
-                <Globe size={16} strokeWidth={1.5} />
-                <span className="label-mono">OPEN ALCHIMISTRA STUDIO</span>
-              </a>
-            </div>
-          </div> */}
         </motion.div>
       </section>
     </main>
