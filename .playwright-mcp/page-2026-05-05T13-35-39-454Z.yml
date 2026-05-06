@@ -1,0 +1,211 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Main navigation" [ref=e3]:
+      - link "Irfan Ariff home" [ref=e4] [cursor=pointer]:
+        - /url: "#home"
+        - text: IA
+      - generic [ref=e5]:
+        - link "Work" [ref=e6] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Experience" [ref=e7] [cursor=pointer]:
+          - /url: "#experience"
+        - link "Certifications" [ref=e8] [cursor=pointer]:
+          - /url: "#certifications"
+        - link "Capabilities" [ref=e9] [cursor=pointer]:
+          - /url: "#capabilities"
+        - link "Contact" [ref=e10] [cursor=pointer]:
+          - /url: "#contact"
+      - link "Contact" [ref=e11] [cursor=pointer]:
+        - /url: mailto:irfan.ariff.dev@gmail.com
+        - img [ref=e12]
+        - text: Contact
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]: Software Engineering Student
+        - heading "IRFAN ARIFF" [level=1] [ref=e19]:
+          - generic [ref=e20]: IRFAN
+          - generic [ref=e21]: ARIFF
+        - paragraph [ref=e22]: Full Stack Developer & UI-Focused Product Builder
+        - paragraph [ref=e23]: I build clean, scalable, and user-focused digital products. From idea to implementation, I care about code quality, performance, and meaningful design.
+        - generic [ref=e24]:
+          - link "View My Work" [ref=e25] [cursor=pointer]:
+            - /url: "#projects"
+            - text: View My Work
+            - img [ref=e26]
+          - link "Download Resume" [ref=e28] [cursor=pointer]:
+            - /url: mailto:irfan.ariff.dev@gmail.com?subject=Resume Request
+            - text: Download Resume
+            - img [ref=e29]
+      - generic "Replaceable 3D IA orb placeholder" [ref=e32]:
+        - generic [ref=e37]: IA
+        - generic [ref=e39]: React
+        - generic [ref=e40]: Next.js
+        - generic [ref=e41]: AI
+        - generic [ref=e42]: UI
+        - generic [ref=e43]:
+          - generic [ref=e44]: build()
+          - strong [ref=e45]: Product UI
+        - generic [ref=e46]:
+          - generic [ref=e47]: Status
+          - strong [ref=e48]: Polished
+    - region "Quick contact links" [ref=e49]:
+      - link "Kuala Lumpur, Malaysia" [ref=e50] [cursor=pointer]:
+        - /url: "#contact"
+        - img [ref=e51]
+        - generic [ref=e54]: Kuala Lumpur, Malaysia
+      - link "irfan.ariff.dev@gmail.com" [ref=e55] [cursor=pointer]:
+        - /url: mailto:irfan.ariff.dev@gmail.com
+        - img [ref=e56]
+        - generic [ref=e59]: irfan.ariff.dev@gmail.com
+      - link "github.com/irfanariff" [ref=e60] [cursor=pointer]:
+        - /url: https://github.com/irfanariff
+        - img [ref=e61]
+        - generic [ref=e64]: github.com/irfanariff
+      - link "linkedin.com/in/irfanariff" [ref=e65] [cursor=pointer]:
+        - /url: https://linkedin.com/in/irfanariff
+        - img [ref=e66]
+        - generic [ref=e70]: linkedin.com/in/irfanariff
+    - region "Technology stack" [ref=e71]:
+      - generic [ref=e72]: JavaScript
+      - generic [ref=e73]: TypeScript
+      - generic [ref=e74]: React
+      - generic [ref=e75]: Next.js
+      - generic [ref=e76]: Node.js
+      - generic [ref=e77]: PostgreSQL
+      - generic [ref=e78]: Tailwind CSS
+      - generic [ref=e79]: Git
+      - generic [ref=e80]: Figma
+      - generic [ref=e81]: Flutter
+      - generic [ref=e82]: Firebase
+      - generic [ref=e83]: Laravel
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - generic [ref=e86]: Featured Projects
+        - heading "Polished builds with practical product thinking." [level=2] [ref=e87]
+        - paragraph [ref=e88]: A focused selection of mobile and web products shaped around real workflows, clean interfaces, and scalable implementation.
+      - generic [ref=e89]:
+        - article [ref=e90]:
+          - generic [ref=e91]:
+            - generic [ref=e92]: Mobile Application
+            - generic [ref=e93]: "01"
+          - heading "CutiMate" [level=3] [ref=e94]
+          - paragraph [ref=e95]: Social trip-planning app for Malaysian travelers.
+          - generic [ref=e96]:
+            - img [ref=e97]
+            - generic [ref=e101]: Flutter, Firebase, UI/UX
+          - generic [ref=e102]:
+            - generic [ref=e103]: Group planning
+            - generic [ref=e104]: Voting
+            - generic [ref=e105]: Expenses
+            - generic [ref=e106]: Itineraries
+        - article [ref=e107]:
+          - generic [ref=e108]:
+            - generic [ref=e109]: Mobile Application
+            - generic [ref=e110]: "02"
+          - heading "MyUmrahGuide" [level=3] [ref=e111]
+          - paragraph [ref=e112]: Umrah practice companion app with guided ritual flow.
+          - generic [ref=e113]:
+            - img [ref=e114]
+            - generic [ref=e118]: Flutter, UX Design, Local Storage
+          - generic [ref=e119]:
+            - generic [ref=e120]: Step-by-step guidance
+            - generic [ref=e121]: Progress tracking
+            - generic [ref=e122]: Practice mode
+        - article [ref=e123]:
+          - generic [ref=e124]:
+            - generic [ref=e125]: Web Platform
+            - generic [ref=e126]: "03"
+          - heading "Qalam Irma Online Print System" [level=3] [ref=e127]
+          - paragraph [ref=e128]: Online print order system for a local mini mart and printing service.
+          - generic [ref=e129]:
+            - img [ref=e130]
+            - generic [ref=e134]: Next.js or Laravel, Database, Admin Dashboard
+          - generic [ref=e135]:
+            - generic [ref=e136]: Document upload
+            - generic [ref=e137]: Print options
+            - generic [ref=e138]: Pickup scheduling
+            - generic [ref=e139]: Admin workflow
+    - generic [ref=e140]:
+      - generic [ref=e141]:
+        - generic [ref=e142]: Experience
+        - heading "Digital systems with brand, infrastructure, and UI depth." [level=2] [ref=e143]
+        - paragraph [ref=e144]: Copper Boston Group is where product implementation meets high-performance digital architecture.
+      - article [ref=e145]:
+        - generic [ref=e146]:
+          - generic [ref=e147]: 2024 - Present - Remote
+          - heading "Copper Boston Group" [level=3] [ref=e148]
+          - paragraph [ref=e149]: Digital, Infrastructure & Brand Architecture
+        - paragraph [ref=e150]: Through Copper Boston, I architect high-performance digital ecosystems for institutions and independent brands. Focused on technical stability, scalable structure, and data-driven UI.
+        - generic [ref=e151]:
+          - generic [ref=e152]: System Architecture
+          - generic [ref=e153]: Performance Optimization
+          - generic [ref=e154]: Data-Driven UI
+          - generic [ref=e155]: Product Implementation
+    - generic [ref=e156]:
+      - generic [ref=e157]:
+        - generic [ref=e158]: Certifications
+        - heading "Proof of engineering range and delivery discipline." [level=2] [ref=e159]
+        - paragraph [ref=e160]: Training across open source workflows, security awareness, and project management.
+      - generic [ref=e161]:
+        - link "GitHub Workshop Open Source Contributor, GDG IIUM" [ref=e162] [cursor=pointer]:
+          - /url: /github-workshop.webp
+          - img [ref=e163]
+          - generic [ref=e166]:
+            - heading "GitHub Workshop" [level=3] [ref=e167]
+            - paragraph [ref=e168]: Open Source Contributor, GDG IIUM
+          - img [ref=e169]
+        - link "How Hackers Break Into WiFi 0Day Academy / OWASP" [ref=e173] [cursor=pointer]:
+          - /url: /cert-owasp-wifi.webp
+          - img [ref=e174]
+          - generic [ref=e177]:
+            - heading "How Hackers Break Into WiFi" [level=3] [ref=e178]
+            - paragraph [ref=e179]: 0Day Academy / OWASP
+          - img [ref=e180]
+        - link "Google Project Management Coursera" [ref=e184] [cursor=pointer]:
+          - /url: /cert-google-pm.webp
+          - img [ref=e185]
+          - generic [ref=e188]:
+            - heading "Google Project Management" [level=3] [ref=e189]
+            - paragraph [ref=e190]: Coursera
+          - img [ref=e191]
+    - generic [ref=e195]:
+      - generic [ref=e196]:
+        - generic [ref=e197]: What I Do
+        - heading "From interface polish to full product implementation." [level=2] [ref=e198]
+        - paragraph [ref=e199]: I combine software engineering fundamentals with visual execution and AI-assisted workflows.
+      - generic [ref=e200]:
+        - article [ref=e201]:
+          - img [ref=e202]
+          - heading "Full-Stack Development" [level=3] [ref=e206]
+        - article [ref=e207]:
+          - img [ref=e208]
+          - heading "Mobile App Development" [level=3] [ref=e210]
+        - article [ref=e211]:
+          - img [ref=e212]
+          - heading "UI Implementation" [level=3] [ref=e218]
+        - article [ref=e219]:
+          - img [ref=e220]
+          - heading "AI-Assisted Workflow" [level=3] [ref=e222]
+        - article [ref=e223]:
+          - img [ref=e224]
+          - heading "Problem Solving" [level=3] [ref=e228]
+    - generic [ref=e229]:
+      - generic [ref=e230]: Available For The Right Fit
+      - heading "Have a project, idea, or internship opportunity?" [level=2] [ref=e231]
+      - paragraph [ref=e232]: I am open to software engineering internships, freelance builds, and collaboration on meaningful digital products.
+      - generic [ref=e233]:
+        - link "Contact Me" [ref=e234] [cursor=pointer]:
+          - /url: mailto:irfan.ariff.dev@gmail.com
+          - text: Contact Me
+          - img [ref=e235]
+        - link "View Resume" [ref=e238] [cursor=pointer]:
+          - /url: mailto:irfan.ariff.dev@gmail.com?subject=Resume Request
+          - text: View Resume
+          - img [ref=e239]
+  - contentinfo [ref=e243]:
+    - generic [ref=e244]: IRFAN ARIFF
+    - generic [ref=e245]: Full Stack Developer & UI-Focused Product Builder
+    - link "Back to top" [ref=e246] [cursor=pointer]:
+      - /url: "#home"
+  - img
