@@ -238,7 +238,7 @@ export default function Home() {
                 </div>
 
                 <div className="profile-links">
-                  <a href="mailto:mnifanmohdariff@gmail.com" aria-label="Email Irfan">
+                  <a href="mailto:muhdnurirfanmohdariff@gmail.com" aria-label="Email Irfan">
                     <Mail size={16} strokeWidth={2} />
                   </a>
                   <a href="https://www.linkedin.com/in/irfan-ariff-20691a264" target="_blank" rel="noreferrer" aria-label="LinkedIn">
@@ -438,7 +438,7 @@ export default function Home() {
         <div className="contact-grid">
           <div className="contact-card">
             <span className="block-label">Email</span>
-            <a href="mailto:mnifanmohdariff@gmail.com">mnifanmohdariff@gmail.com</a>
+            <a href="mailto:muhdnurirfanmohdariff@gmail.com">muhdnurirfanmohdariff@gmail.com</a>
           </div>
           <div className="contact-card">
             <span className="block-label">LinkedIn</span>

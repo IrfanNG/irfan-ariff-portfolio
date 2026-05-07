@@ -151,7 +151,7 @@ export const contactIntro =
   "I'm currently open to internship opportunities in software development and product teams.";
 
 export const contactLinks = [
-  { label: 'Email', href: 'mailto:mnifanmohdariff@gmail.com' },
+  { label: 'Email', href: 'mailto:muhdnurirfanmohdariff@gmail.com' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/irfan-ariff-20691a264' },
   { label: 'GitHub', href: 'https://github.com/IrfanNG' },
   { label: 'Resume', href: resumeDownloadHref },

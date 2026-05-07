@@ -4,7 +4,7 @@ Software Engineering student focused on building real-world web and mobile apps 
 
 ## Contact
 
-- Email: mnifanmohdariff@gmail.com
+- Email: muhdnurirfanmohdariff@gmail.com
 - LinkedIn: https://www.linkedin.com/in/irfan-ariff-20691a264
 - GitHub: https://github.com/IrfanNG
 - WhatsApp: https://wa.me/60183823063
