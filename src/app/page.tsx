@@ -1,353 +1,474 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import { MapPin, Terminal, Github, Linkedin, AtSign, ExternalLink, Mail, MessageCircle, Briefcase } from 'lucide-react';
 import Image from 'next/image';
+import {
+  BadgeCheck,
+  Download,
+  ExternalLink,
+  Github,
+  Linkedin,
+  Mail,
+  MessageCircle,
+  Sparkles,
+} from 'lucide-react';
+import SiteHeader from '@/components/site-header';
+import {
+  aboutParagraphs,
+  aiSections,
+  contactIntro,
+  experienceItems,
+  featuredProjects,
+  heroBadges,
+  navLinks,
+  resumeDownloadHref,
+  resumePitch,
+  skillGroups,
+  valueCards,
+  workflowMessage,
+  workflowSteps,
+} from '@/lib/portfolio';
 
-
-export default function Home() {
-  const metadata = [
-    { icon: <MapPin size={12} />, label: 'LOCATION', value: 'KUALA LUMPUR' },
-    { icon: <Terminal size={12} />, label: 'AVAILABILITY', value: 'SELECTIVE FREELANCE' },
-  ];
-
+function SectionHeading({
+  eyebrow,
+  title,
+  description,
+}: {
+  eyebrow: string;
+  title: string;
+  description?: string;
+}) {
   return (
-    <main className="dossier-grid">
-      {/* --- THE LETTERHEAD HEADER --- */}
-      <section className="col-start-1 col-end-13">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="header-block"
-        >
-          {/* Identity Section */}
-          <div className="identity-container">
-            <div className="photo-box">
-              <Image
-                src="/new-profile-image.jpeg"
-                alt="Irfan Ariff"
-                width={150}
-                height={150}
-                className="photo-img"
-                priority
-                quality={90}
-                sizes="(max-width: 768px) 150px, 150px"
-              />
-            </div>
-
-            <div className="name-box">
-              <h1 className="serif-display name-title">
-                IRFAN ARIFF
-              </h1>
-              <p className="label-mono subtitle">
-                FULL-STACK ENGINEER
-              </p>
-            </div>
-          </div>
-
-          {/* Metadata Bar */}
-          <div className="hairline-h" style={{ marginBottom: '1rem' }} />
-
-          <nav aria-label="Social Profiles" className="social-list-horizontal" style={{ padding: '0 0 1rem 0' }}>
-            <a href="https://github.com/IrfanNG" target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label="GitHub">
-              <Github size={20} strokeWidth={1.5} />
-            </a>
-            <a href="https://www.linkedin.com/in/irfan-ariff-20691a264" target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label="LinkedIn">
-              <Linkedin size={20} strokeWidth={1.5} />
-            </a>
-            <a href="https://www.threads.net/@irfanrff" target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label="Threads">
-              <AtSign size={20} strokeWidth={1.5} />
-            </a>
-            <a href="mailto:mnifanmohdariff@gmail.com" className="social-icon-link" aria-label="Email">
-              <Mail size={20} strokeWidth={1.5} />
-            </a>
-            <a href="https://wa.me/60183823063" target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label="WhatsApp">
-              <MessageCircle size={20} strokeWidth={1.5} />
-            </a>
-          </nav>
-
-          <div className="metadata-bar">
-            {metadata.map((item, index) => (
-              <div key={index} className="metadata-item">
-                <span className="metadata-icon">{item.icon}</span>
-                <span className="label-mono">{item.label}:</span>
-                <span className="label-mono metadata-value">{item.value}</span>
-              </div>
-            ))}
-          </div>
-          <div className="hairline-h" />
-        </motion.div>
-      </section>
-
-      {/* --- THE DOSSIER CONTENT --- */}
-      <section className="col-start-1 col-end-13 md:col-start-1 md:col-end-10" style={{ marginTop: '2rem' }}>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-        >
-          {/* 01 // POSITIONING */}
-          <div className="content-section">
-            <h2 className="label-mono section-header">{"// POSITIONING"}</h2>
-            <p className="intro-text">
-              I build clear, functional web experiences with client-facing offers shaped around delivery, proof, and strong digital presence.
-            </p>
-
-            <div className="client-offer-panel" style={{ marginTop: '2rem' }}>
-              <div className="client-offer-topline">
-                <span className="client-offer-label">CLIENT</span>
-                <span className="client-offer-badge">RECOMMENDED</span>
-              </div>
-
-              <div className="client-offer-head">
-                <span className="client-offer-icon" aria-hidden="true">
-                  <Briefcase size={16} />
-                </span>
-                <h3 className="client-offer-title">What you can hire me for</h3>
-              </div>
-
-              <p className="client-offer-copy">
-                Portfolio builds, product surfaces, and clean handoff-friendly implementations.
-              </p>
-
-              <div className="client-offer-grid">
-                <div className="client-offer-item">
-                  <span className="label-mono">PORTFOLIO BUILDS</span>
-                  <p>Curated personal sites with strong identity and clean structure.</p>
-                </div>
-                <div className="client-offer-item">
-                  <span className="label-mono">PRODUCT SURFACES</span>
-                  <p>Focused landing pages and product pages designed to convert.</p>
-                </div>
-                <div className="client-offer-item">
-                  <span className="label-mono">HAND-OFF READY</span>
-                  <p>Implementation that is clean, maintainable, and easy to continue.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 02 // FEATURED WORK */}
-          <div className="content-section" id="featured-work">
-            <h2 className="label-mono section-header">{"// FEATURED WORK"}</h2>
-
-            <div className="flex flex-col gap-6">
-              <div className="flex flex-col gap-1">
-                <h3 className="serif-display" style={{ fontSize: '1.25rem', lineHeight: '1.1', textTransform: 'uppercase' }}>COPPER BOSTON GROUP</h3>
-                <p className="label-mono" style={{ color: 'var(--accent)', fontSize: '0.6rem' }}>DIGITAL INFRASTRUCTURE & BRAND ARCHITECTURE</p>
-              </div>
-
-              <p className="intro-text" style={{ fontSize: '1.1rem' }}>
-                High-performance digital ecosystem work for institutions and independent brands, with technical stability and data-driven UI at the core.
-              </p>
-
-              <a
-                href="https://www.copperboston.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="work-preview-link"
-                aria-label="Open Copper Boston website in a new tab"
-              >
-                <div className="work-preview-card">
-                  <div className="work-preview-chrome">
-                    <div className="work-preview-dots" aria-hidden="true">
-                      <span />
-                      <span />
-                      <span />
-                    </div>
-                    <span className="label-mono work-preview-url">COPPERBOSTON.DEV</span>
-                    <ExternalLink size={14} strokeWidth={1.5} className="work-preview-icon" aria-hidden="true" />
-                  </div>
-
-                  <div className="work-preview-image-wrap">
-                    <Image
-                      src="/hero-crop.png"
-                      alt="Preview of the Copper Boston website homepage"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 720px"
-                      className="work-preview-image"
-                    />
-                    <div className="work-preview-overlay">
-                      <span className="label-mono">OPEN WEBSITE</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          {/* 03 // SELECTED PROJECTS */}
-          <div className="content-section" id="selected-projects">
-            <h2 className="label-mono section-header">{"// SELECTED PROJECTS"}</h2>
-
-            <div className="dossier-table">
-              <div className="table-row">
-                <div className="cell-details">
-                  <span className="serif-display cell-role">SAKURAYA - DUIT RAYA PLANNER</span>
-                  <p className="label-mono cell-desc">Financial gifting planner with clear flow and low-friction experience.</p>
-                  <a href="https://github.com/IrfanNG/SakuRaya" target="_blank" rel="noopener noreferrer" className="repo-link">
-                    <Github size={12} strokeWidth={1.5} />
-                    <span className="label-mono" style={{ fontSize: '0.6rem' }}>SOURCE</span>
-                  </a>
-                </div>
-                <span className="label-mono cell-org">GODAMSAHUR HACKATHON</span>
-              </div>
-              <div className="hairline-h table-divider" />
-
-              <div className="table-row">
-                <div className="cell-details">
-                  <span className="serif-display cell-role">SAF - MOSQUE COMMUNITY PLATFORM</span>
-                  <p className="label-mono cell-desc">Community coordination platform for updates, events, and participation.</p>
-                  <a href="https://github.com/IrfanNG/Saf" target="_blank" rel="noopener noreferrer" className="repo-link">
-                    <Github size={12} strokeWidth={1.5} />
-                    <span className="label-mono" style={{ fontSize: '0.6rem' }}>SOURCE</span>
-                  </a>
-                </div>
-                <span className="label-mono cell-org">KRACKEDDEVS CHALLENGE</span>
-              </div>
-            </div>
-          </div>
-
-          {/* 04 // BACKGROUND */}
-          <div className="content-section">
-            <h2 className="label-mono section-header">{"// BACKGROUND"}</h2>
-
-            <div className="dossier-table">
-              <div className="table-row">
-                <div className="cell-details">
-                  <span className="serif-display cell-role">BSc. INFORMATION TECHNOLOGY (SOFTWARE ENGINEERING)</span>
-                  <p className="label-mono cell-desc">Web architecture, OOP, and project management foundation.</p>
-                </div>
-                <span className="label-mono cell-org">UNIKL MIIT</span>
-              </div>
-              <div className="hairline-h table-divider" />
-
-              <div className="table-row">
-                <div className="cell-details">
-                  <span className="serif-display cell-role">DIPLOMA IN COMPUTER SYSTEM</span>
-                </div>
-                <span className="label-mono cell-org">ADV. TECH TRAINING CENTRE</span>
-              </div>
-              <div className="hairline-h table-divider" />
-            </div>
-          </div>
-          {/* 05 // CERTIFICATIONS */}
-          <div className="content-section">
-            <h2 className="label-mono section-header">{"// CERTIFICATIONS"}</h2>
-
-            <div className="dossier-table">
-              {/* GITHUB WORKSHOP */}
-              <div className="table-row">
-                <div className="cell-details">
-                  <span className="serif-display cell-role">GITHUB WORKSHOP - OPEN SOURCE CONTRIBUTOR</span>
-                  <a
-                    href="/github-workshop.webp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cert-preview-link"
-                    aria-label="Open GitHub Workshop certificate in a new tab"
-                  >
-                    <div className="cert-preview-thumb">
-                      <Image
-                        src="/github-workshop.webp"
-                        alt="Preview of the GitHub Workshop certificate"
-                        fill
-                        sizes="(max-width: 768px) 44vw, 180px"
-                        className="cert-preview-image"
-                      />
-                      <div className="cert-preview-overlay" aria-hidden="true">
-                        <ExternalLink size={12} strokeWidth={1.5} />
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <span className="label-mono cell-org">GDG IIUM</span>
-              </div>
-              <div className="hairline-h table-divider" />
-
-              {/* OWASP */}
-              <div className="table-row">
-                <div className="cell-details">
-                  <span className="serif-display cell-role">HOW HACKERS BREAK INTO WIFI</span>
-                  <a
-                    href="/cert-owasp-wifi.webp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cert-preview-link"
-                    aria-label="Open OWASP WiFi certificate in a new tab"
-                  >
-                    <div className="cert-preview-thumb">
-                      <Image
-                        src="/cert-owasp-wifi.webp"
-                        alt="Preview of the OWASP WiFi security certificate"
-                        fill
-                        sizes="(max-width: 768px) 44vw, 180px"
-                        className="cert-preview-image"
-                      />
-                      <div className="cert-preview-overlay" aria-hidden="true">
-                        <ExternalLink size={12} strokeWidth={1.5} />
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <span className="label-mono cell-org">0DAY ACADEMY / OWASP</span>
-              </div>
-              <div className="hairline-h table-divider" />
-
-              {/* GOOGLE PM */}
-              <div className="table-row">
-                <div className="cell-details">
-                  <span className="serif-display cell-role">GOOGLE PROJECT MANAGEMENT</span>
-                  <a
-                    href="/cert-google-pm.webp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cert-preview-link"
-                    aria-label="Open Google Project Management certificate in a new tab"
-                  >
-                    <div className="cert-preview-thumb">
-                      <Image
-                        src="/cert-google-pm.webp"
-                        alt="Preview of the Google Project Management certificate"
-                        fill
-                        sizes="(max-width: 768px) 44vw, 180px"
-                        className="cert-preview-image"
-                      />
-                      <div className="cert-preview-overlay" aria-hidden="true">
-                        <ExternalLink size={12} strokeWidth={1.5} />
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <span className="label-mono cell-org">COURSERA</span>
-              </div>
-            </div>
-          </div>
-
-          {/* 06 // CONTACT */}
-          <div className="content-section" id="contact">
-            <h2 className="label-mono section-header">{"// CONTACT"}</h2>
-            <p className="intro-text" style={{ fontSize: '1.1rem' }}>
-              Open to selective freelance builds, portfolio revamps, and product pages that need clean execution.
-            </p>
-
-            <div className="cta-row">
-              <a href="mailto:mnifanmohdariff@gmail.com" className="repo-link">
-                <Mail size={12} strokeWidth={1.5} />
-                <span className="label-mono" style={{ fontSize: '0.6rem' }}>EMAIL</span>
-              </a>
-              <a href="https://wa.me/60183823063" target="_blank" rel="noopener noreferrer" className="repo-link">
-                <MessageCircle size={12} strokeWidth={1.5} />
-                <span className="label-mono" style={{ fontSize: '0.6rem' }}>WHATSAPP</span>
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      </section>
-    </main>
+    <div className="section-heading">
+      <p className="eyebrow">{eyebrow}</p>
+      <h2>{title}</h2>
+      {description ? <p className="section-copy">{description}</p> : null}
+    </div>
   );
 }
 
+function Badge({ children }: { children: React.ReactNode }) {
+  return <span className="badge">{children}</span>;
+}
 
+function InfoChip({ children }: { children: React.ReactNode }) {
+  return <span className="info-chip">{children}</span>;
+}
 
+function RepoButton({
+  repoUrl,
+  repoLabel = 'GitHub Repo',
+}: {
+  repoUrl?: string;
+  repoLabel?: string;
+}) {
+  if (!repoUrl) {
+    return null;
+  }
+
+  return (
+    <a className="repo-button" href={repoUrl} target="_blank" rel="noreferrer">
+      <Github size={14} strokeWidth={2} />
+      {repoLabel}
+    </a>
+  );
+}
+
+function ProjectCard({
+  title,
+  category,
+  summary,
+  status,
+  problem,
+  solution,
+  role,
+  keyFeatures,
+  techStack,
+  challenge,
+  whatILearned,
+  repoUrl,
+  repoLabel,
+}: (typeof featuredProjects)[number]) {
+  return (
+    <article className="project-card">
+      <div className="project-card-head">
+        <div>
+          <p className="eyebrow">{category}</p>
+          <h3>{title}</h3>
+        </div>
+        <div className="project-head-actions">
+          <InfoChip>{status}</InfoChip>
+          <RepoButton repoUrl={repoUrl} repoLabel={repoLabel} />
+        </div>
+      </div>
+
+      <p className="project-summary">{summary}</p>
+
+      <div className="project-grid">
+        <div className="project-block">
+          <span className="block-label">Problem</span>
+          <p>{problem}</p>
+        </div>
+        <div className="project-block">
+          <span className="block-label">Solution</span>
+          <p>{solution}</p>
+        </div>
+        <div className="project-block">
+          <span className="block-label">My Role</span>
+          <p>{role}</p>
+        </div>
+        <div className="project-block">
+          <span className="block-label">Challenge</span>
+          <p>{challenge}</p>
+        </div>
+      </div>
+
+      <div className="project-footer">
+        <div className="project-section">
+          <span className="block-label">Key Features</span>
+          <div className="chip-group">
+            {keyFeatures.map((feature) => (
+              <span key={feature} className="chip">
+                {feature}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="project-section">
+          <span className="block-label">Tech Stack</span>
+          <div className="chip-group">
+            {techStack.map((tool) => (
+              <span key={tool} className="chip chip-muted">
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="project-section project-insight">
+          <span className="block-label">What I Learned</span>
+          <p>{whatILearned}</p>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+export default function Home() {
+  return (
+    <main className="portfolio-shell">
+      <SiteHeader
+        brandLabel="Irfan"
+        brandHref="/"
+        navLinks={navLinks}
+        actions={[
+          { label: 'Resume', href: resumeDownloadHref, variant: 'ghost', external: true, download: true },
+          { label: 'Contact Me', href: '#contact', variant: 'solid' },
+        ]}
+      />
+
+      <section className="hero section-pad">
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <h1>
+              AI-assisted software developer building web and mobile products with speed, clarity,
+              and practical implementation.
+            </h1>
+            <p className="hero-lead">
+              I&apos;m a Software Engineering student focused on rapid development, clean UI, and
+              practical digital solutions for business and user problems.
+            </p>
+
+            <div className="hero-actions">
+              <a className="button button-solid" href="#projects">
+                View Projects
+              </a>
+              <a className="button button-ghost" href={resumeDownloadHref} download>
+                <Download size={16} strokeWidth={2} />
+                Download Resume
+              </a>
+              <a className="button button-ghost" href="#contact">
+                Contact Me
+              </a>
+            </div>
+
+            <div className="badge-row" aria-label="Trust badges">
+              {heroBadges.map((badge) => (
+                <Badge key={badge}>
+                  <BadgeCheck size={14} strokeWidth={2} />
+                  {badge}
+                </Badge>
+              ))}
+            </div>
+
+            <div className="hero-positioning">
+              <Sparkles size={16} strokeWidth={2} />
+              <p>{resumePitch}</p>
+            </div>
+          </div>
+
+          <aside className="hero-aside">
+            <div className="profile-card">
+              <div className="profile-visual">
+                <Image
+                  src="/new-profile-image.jpeg"
+                  alt="Irfan"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 420px"
+                  className="profile-image"
+                />
+              </div>
+
+              <div className="profile-body">
+                <p className="eyebrow">Irfan Ariff</p>
+                <h2>Software Engineering Student / AI-Assisted Software Developer</h2>
+                <p className="profile-text">
+                  Internship-ready for teams that need someone who can move quickly, keep the UI
+                  clean, and help turn ideas into usable product work.
+                </p>
+
+                <div className="profile-grid">
+                  <div>
+                    <span className="block-label">Strength</span>
+                    <p>Rapid delivery with clean UI thinking</p>
+                  </div>
+                  <div>
+                    <span className="block-label">Focus</span>
+                    <p>Internship-ready product work</p>
+                  </div>
+                </div>
+
+                <div className="profile-links">
+                  <a href="mailto:mnifanmohdariff@gmail.com" aria-label="Email Irfan">
+                    <Mail size={16} strokeWidth={2} />
+                  </a>
+                  <a href="https://www.linkedin.com/in/irfan-ariff-20691a264" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                    <Linkedin size={16} strokeWidth={2} />
+                  </a>
+                  <a href="https://github.com/IrfanNG" target="_blank" rel="noreferrer" aria-label="GitHub">
+                    <Github size={16} strokeWidth={2} />
+                  </a>
+                  <a href="https://wa.me/60183823063" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                    <MessageCircle size={16} strokeWidth={2} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section className="section-pad" id="value">
+        <SectionHeading
+          eyebrow="WHAT I CAN BRING TO YOUR TEAM"
+          title="I help teams move faster without losing product quality."
+        />
+
+        <div className="value-grid">
+          {valueCards.map((card) => (
+            <article key={card.title} className="value-card">
+              <h3>{card.title}</h3>
+              <p>{card.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-pad" id="about">
+        <SectionHeading
+          eyebrow="ABOUT ME"
+          title="Short version."
+        />
+
+        <div className="about-grid">
+          <div className="about-copy">
+            {aboutParagraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+
+          <div className="about-panel">
+            <div className="panel-row">
+              <span className="block-label">Focus</span>
+              <p>Web apps, mobile apps, and practical product work</p>
+            </div>
+            <div className="panel-row">
+              <span className="block-label">Working style</span>
+              <p>Direct, structured, proof-first, and iteration-friendly</p>
+            </div>
+            <div className="panel-row">
+              <span className="block-label">Tools I use</span>
+              <p>ChatGPT, Codex, Gemini, Figma, Google Stitch</p>
+            </div>
+            <div className="panel-row">
+              <span className="block-label">Best fit</span>
+              <p>Teams that care about speed, clarity, and product quality</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad" id="projects">
+        <SectionHeading
+          eyebrow="FEATURED PROJECTS"
+          title="Case studies that show product thinking, not just screenshots."
+        />
+
+        <div className="project-stack">
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.slug} {...project} />
+          ))}
+        </div>
+      </section>
+
+      <section className="section-pad" id="process">
+        <SectionHeading
+          eyebrow="HOW I BUILD PRODUCTS"
+          title="A simple process that keeps me fast and accountable."
+          description="I do not jump straight into code. I structure the work first so the end result is easier to use and easier to maintain."
+        />
+
+        <div className="process-grid">
+          {workflowSteps.map((step, index) => (
+            <article key={step} className="process-card">
+              <span className="process-index">0{index + 1}</span>
+              <p>{step}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="process-callout">
+          <Sparkles size={18} strokeWidth={2} />
+          <p>{workflowMessage}</p>
+        </div>
+      </section>
+
+      <section className="section-pad" id="ai">
+        <SectionHeading
+          eyebrow="HOW I USE AI IN DEVELOPMENT"
+          title="AI speeds up the work, but I still own the quality."
+          description="AI helps me move faster, but I still review, test, debug, and improve everything myself."
+        />
+
+        <div className="ai-grid">
+          {aiSections.map((section) => (
+            <article key={section.title} className="ai-card">
+              <h3>{section.title}</h3>
+              <p>{section.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-pad" id="skills">
+        <SectionHeading
+          eyebrow="SKILLS"
+          title="Grouped by how recruiters actually scan them."
+          description="No percentages. No fake bars. Just a clear read on what I can work with."
+        />
+
+        <div className="skill-grid">
+          {skillGroups.map((group) => (
+            <article key={group.title} className="skill-card">
+              <h3>{group.title}</h3>
+              <div className="chip-group">
+                {group.items.map((skill) => (
+                  <span key={skill} className="chip">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-pad" id="experience">
+        <SectionHeading
+          eyebrow="EXPERIENCE"
+          title="Real responsibility, real communication, real troubleshooting."
+        />
+
+        <div className="experience-grid">
+          {experienceItems.map((item) => (
+            <article key={item.title} className="experience-card">
+              <h3>{item.title}</h3>
+              <p className="experience-desc">{item.description}</p>
+              <div className="chip-group">
+                {item.emphasis.map((point) => (
+                  <span key={point} className="chip chip-muted">
+                    {point}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-pad" id="resume">
+        <div className="resume-card">
+          <SectionHeading
+            eyebrow="RESUME"
+            title="Easy to download, easy to forward."
+            description={contactIntro}
+          />
+
+          <p className="resume-copy">{resumePitch}</p>
+
+          <div className="cta-row">
+            <a className="button button-solid" href={resumeDownloadHref} download>
+              <Download size={16} strokeWidth={2} />
+              Download Resume
+            </a>
+            <a className="button button-ghost" href="https://www.linkedin.com/in/irfan-ariff-20691a264" target="_blank" rel="noreferrer">
+              View LinkedIn
+              <ExternalLink size={16} strokeWidth={2} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad" id="contact">
+        <SectionHeading
+          eyebrow="CONTACT"
+          title="Open for internship opportunities."
+          description="If you need someone who can help build, improve, and ship digital products faster, this is where to reach me."
+        />
+
+        <div className="contact-grid">
+          <div className="contact-card">
+            <span className="block-label">Email</span>
+            <a href="mailto:mnifanmohdariff@gmail.com">mnifanmohdariff@gmail.com</a>
+          </div>
+          <div className="contact-card">
+            <span className="block-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/irfan-ariff-20691a264" target="_blank" rel="noreferrer">
+              linkedin.com/in/irfan-ariff-20691a264
+            </a>
+          </div>
+          <div className="contact-card">
+            <span className="block-label">GitHub</span>
+            <a href="https://github.com/IrfanNG" target="_blank" rel="noreferrer">
+              github.com/IrfanNG
+            </a>
+          </div>
+          <div className="contact-card">
+            <span className="block-label">Resume</span>
+            <a href={resumeDownloadHref} download>
+              Download PDF resume
+            </a>
+          </div>
+          <div className="contact-card">
+            <span className="block-label">WhatsApp</span>
+            <a href="https://wa.me/60183823063" target="_blank" rel="noreferrer">
+              +60 18-382 3063
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer className="footer">
+      </footer>
+    </main>
+  );
+}
